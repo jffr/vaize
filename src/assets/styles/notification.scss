@@ -1,0 +1,29 @@
+#app .vue-notification {
+  $processing: #1ca8ee;
+  $warning: #ee4e1c;
+  $success: #16be54;
+
+  padding: 1rem;
+  margin: 0;
+  font-size: $font-size;
+  color: #ffffff;
+  background: #44A4FC;
+  border: none;
+
+  &.processing {
+    background: $processing;
+    border: none;
+  }
+  &.warn {
+    background: $warning;
+    border: none;
+  }
+  &.error {
+    background: red;
+    border: none;
+  }
+  &.success {
+    background: $success;
+    border: none;
+  }
+}

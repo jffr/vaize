@@ -1,0 +1,52 @@
+/* --------------
+  Font
+---------------*/
+
+$font-family: 'Roboto', sans-serif;
+$font-family-special: 'Roboto Condensed', sans-serif;
+$font-size: 1.8rem;
+
+/* --------------
+  Breakpoints
+---------------*/
+
+$screen-xs: 30em; // 480px
+$screen-sm: 48em; // 768px
+$screen-md: 62em; // 992px
+$screen-lg: 75em; // 1200px
+
+/* --------------
+  Sizes
+---------------*/
+
+// Navigation
+$height-navigation: 5.7rem;
+
+// Tab heading
+$height-heading-xs: 2.5rem;
+$height-heading-sm: 3.3rem;
+$height-heading-md: 4.3rem;
+$padding-heading-xs: 2.5rem;
+$padding-heading-sm: 3.0rem;
+$padding-heading-md: 8.0rem;
+$font-size-heading-xs: 1.5rem;
+$font-size-heading-md: 2.7rem;
+$font-size-heading-sm: 2.2rem;
+
+// Container
+$padding-container: 1.5rem;
+
+/* --------------
+  Colors
+---------------*/
+
+$color-text: #000;
+$color-link: #0054a6;
+$color-gray: #616161;
+$color-gray-lighter: #a6a6a6;
+$color-background: #fff;
+$color-background-darker: #121415;
+
+// Navigation
+$color-navigation-text: #fff;
+$color-navigation-background: #000;
