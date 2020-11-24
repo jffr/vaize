@@ -30,7 +30,7 @@
         </li>
       </ul>
       <p class="copyright">
-        &copy; 2019 - Vaize Studio
+        &copy; {{ copyrightYear }} - Vaize Studio
       </p>
     </div>
   </div>
@@ -39,6 +39,11 @@
 <script>
 export default {
   name: 'TheFooter',
+  data() {
+    return {
+      copyrightYear: new Date().getFullYear(),
+    };
+  },
 };
 </script>
 
