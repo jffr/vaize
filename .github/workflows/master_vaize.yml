@@ -1,0 +1,42 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Build and deploy Node.js app to Azure Web App - vaize
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Set up Node.js version
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+
+    - name: npm install, build, and test
+      run: |
+        npm install
+        npm run build --if-present
+        npm run test --if-present
+      env:
+        APP_HOST: ${{ secrets.APP_HOST }}
+        NODEMAILER_USER: ${{ secrets.NODEMAILER_USER }}
+        NODEMAILER_PASSWORD: ${{ secrets.NODEMAILER_PASSWORD }}
+        RECAPTCHA_TOKEN_SERVER: ${{ secrets.RECAPTCHA_TOKEN_SERVER }}
+        VUE_APP_API_HOST: ${{ secrets.VUE_APP_API_HOST }}
+        VUE_APP_RECAPTCHA_TOKEN: ${{ secrets.VUE_APP_RECAPTCHA_TOKEN }}
+      
+    - name: 'Deploy to Azure Web App'
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'vaize'
+        slot-name: 'production'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_99e5a01acad5468db9aff25b5c3f24b4 }}
+        package: .
