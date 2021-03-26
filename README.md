@@ -1,4 +1,9 @@
-# vaize
+# Vaize
+
+## Description
+
+For all your art and design content. Visit the website (https://www.vaize.studio/) for more information.
+This is the source code repo of the project.
 
 ## Project setup
 ```
@@ -24,6 +29,3 @@ npm run test
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
